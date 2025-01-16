@@ -3,4 +3,4 @@ fetch('./config.txt').then(e => e.text())
 	console.info(data)
 }).catch(err => {
 	console.error(err)
-}
+})
