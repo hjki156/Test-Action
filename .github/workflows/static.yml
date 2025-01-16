@@ -33,11 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Prepare MD List
+      - name: Prepare File List
         run:  |
-              for file in ./File/*.txt
-              do echo $file >> ./Page/config.txt
-              done
+          bash ./Tool/copy.sh
+          bash ./Tool/list.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
